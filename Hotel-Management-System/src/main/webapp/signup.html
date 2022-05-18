@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Signup</title>
+<style>
+.flip-container {
+	perspective: 1000;
+}
+
+.flipper {
+	padding: 30px;
+	width: 500px;
+	height: 500px;
+	position: relative;
+	background-color: rgb(180, 180, 180);
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+}
+
+.back {
+	position: absolute;
+	padding: 10px 30px;
+	top: 0;
+	left: 0;
+	right: 0;
+	backface-visibility: hidden;
+}
+
+input {
+	width: 100%;
+	margin-bottom: 15px;
+	height: 40px;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.title {
+	text-align: center;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: lightgray;
+}
+</style>
+
+</head>
+<body>
+	<div class="flip-container">
+		<div class="flipper" id="flipper">
+			<div class="back">
+				<h1 class="title">Register</h1>
+				<h3>Only for Customers</h3>
+				<form action="SignUp" method="post">
+					<input type="text" placeholder="Name" name="name" required="*"> <input
+						type="tel" placeholder="1234567890" pattern="[0-9]{10}" name="phno" required="*"> <input
+						type="email" placeholder="Email" name="mail" required="*"> <input
+						type="password" placeholder="Password" name="pass"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>
+						<input type="submit" value=" Sign Up">
+				</form>
+				<center>
+					<a class="flipbutton " id=" registerButton" href=" sign.html">Login	to My account</a>
+				</center>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
